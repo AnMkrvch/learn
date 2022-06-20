@@ -6,8 +6,7 @@ public class Files {
 
         File file1 = new File("D:\\Angelina\\Documents\\2_copied.txt");
         File file2 = new File("D:\\Angelina\\Documents\\2.txt");
-        try ( FileReader fread1 = new FileReader(file1); FileReader fread2 = new FileReader(file2)
-              ) {
+        try {
             String text1 = e6(file1);
             String text2 = e6(file2);
 
@@ -23,7 +22,7 @@ public class Files {
         BufferedReader bfread = new BufferedReader(fread);
         String str = null;
         //String text = "";
-        StringBuffer srez = new StringBuffer();
+        StringBuilder srez = new StringBuilder();
 
         while ((str = bfread.readLine()) != null) {
             //text += str;
